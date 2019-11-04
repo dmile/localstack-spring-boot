@@ -1,0 +1,16 @@
+localstack:
+  enabled: true
+  s3:
+    enabled: true
+  sqs:
+    enabled: true
+
+cloud:
+  aws:
+    region:
+      static: eu-west-1
+    stack:
+      auto: false
+    credentials:
+      accessKey: "dummy"
+      secretKey: "dummy"
