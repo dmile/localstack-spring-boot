@@ -1,0 +1,13 @@
+stages:
+  - test
+
+test-application:
+  stage: test
+  image: openjdk:12.0-jdk
+  variables:
+    SERVICES: s3, sqs
+    DEFAULT_REGION: eu-west-1
+  services:
+    - name: localstack/localstack:latest
+  script:
+    - ./mvnw clean verify
